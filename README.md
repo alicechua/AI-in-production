@@ -9,16 +9,20 @@ This project is a web application designed to perform document analysis using Fa
 
 ```
 /project-root
-├── app/                          # Backend directory containing FastAPI app
-│   ├── app.py                    # FastAPI app code
-│   └── Dockerfile                # Dockerfile for backend
-├── frontend/                     # Frontend directory containing Gradio app
-│   ├── gradio_interface.py       # Gradio interface code
-│   ├── requirements.txt          # Frontend dependencies
-│   └── Dockerfile                # Dockerfile for frontend
-├── docker-compose.yml            # Docker Compose configuration
-├── requirements.txt              # Backend dependencies
-└── README.md                     # This file
+├── app/                                     # Backend directory containing FastAPI app
+│   ├── app.py                               # FastAPI app code
+│   ├── Dockerfile                           # Dockerfile for backend
+│   ├── requirements.txt                     # Backend dependencies
+│   └── models/                              # LLM Models used
+│      ├── summarization_create_onnx.py      # File to pull BART and create ONNX model
+│      └── summarization_test_onnx           # File to run and test BART ONNX model
+│   └── frontend/                            # Frontend directory containing Gradio app
+│      ├── gradio_interface.py               # Gradio interface code
+│      ├── requirements.txt                  # Frontend dependencies
+│      └── Dockerfile                        # Dockerfile for frontend
+├── archive/                                 # Research on Agents
+├── docker-compose.yml                       # Docker Compose configuration
+└── README.md                                # This file
 ```
 
 ## Requirements
